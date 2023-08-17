@@ -1,0 +1,115 @@
+
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
+*/
+
+@use 'variables' as *;
+@use 'placeholders';
+
+* {
+	box-sizing: border-box;
+}
+
+/* Generals */
+body{
+	background-color: var(--primary);
+	color: $primary-color;
+	line-height: 1.4;
+	font-family: $font-stack;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1{
+	font-family: $font-logo;
+}
+
+h2, h3, h4 {
+	font-family: $font-titles;
+}
+
+
+
+
+/* header */
+
+/* Block */
+.logo {
+	width: 5%;
+  
+	/* Logo footer */
+	&--big {
+	  width: 150%;
+	}
+}
+
+header{
+	background-color: $neutral-color;
+}
+
+/* Block */
+.header-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+/* footer */
+
+footer{
+	background-color: $neutral-color;
+	margin-top: auto;
+}
+
+/* Block */
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin: 2em;
+
+	/* Modificateur */
+	&__link--small{
+	font-size: 0.8em;
+	}
+}
+
+/* Block */
+.flex-dark{
+	display: flex;
+	justify-content: space-around;
+	background-color: $secondary-color;
+	color: $neutral-color;
+	margin-top: auto;
+	padding: 2em;
+
+	&__icon{
+	
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	&__contact{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		}
+
+	&__footer-message{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		}
+}

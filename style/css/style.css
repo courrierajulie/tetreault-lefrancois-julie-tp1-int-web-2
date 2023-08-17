@@ -1,16 +1,50 @@
+@charset "UTF-8";
+
 /* ressources externes - google fonts instructions */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
 
-/*
-font-family: 'Bebas Neue', cursive; (h1)
-font-family: 'Manrope', sans-serif; (p)
-*/
 
+
+
+
+/* Variables globales*/
+:root{
+	/* Palette de couleurs */
+	--primary: rgb(218, 216, 216);
+	--secondary: #2b2828;
+	--neutral: #f6f2f2; 
+	--active: #aba9a8;
+
+	/* Texte */
+		/* font-family: 'Gravitas One'; (h1)
+		font-family: 'Bebas Neue', cursive; (h2, h3, h4)
+		font-family: 'Manrope', sans-serif; (p)
+		*/
+	--standard-font-size: 1.3rem;
+	--normal-font-family: 'Manrope', sans-serif;
+	--titles-font-family: 'Bebas Neue', cursive;
+}
+
+
+
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
+*/
 *{ box-sizing: border-box;}
 
+
+
+/* Generals */
 body{
-	background-color: aliceblue;
+	background-color: var(--primary);
+	color: var(--secondary);
+	line-height: 1.4;
+	font-family: var(--normal-font-family);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .container{
@@ -18,3 +52,174 @@ body{
 	max-width: 1200px;
 	margin: 0 auto;
 }
+
+h1{
+	font-family: 'Gravitas One';
+}
+
+h2, h3, h4{
+	font-family: var(--titles-font-family);
+}
+
+
+
+
+/* header */
+/* intégrer font spéciale téléchargé ici */
+
+.logo{
+	width:5%;
+}
+
+header{
+	background-color: var(--neutral);
+}
+
+.header-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+/* Block */
+.nav-list{
+	list-style: none;
+}
+
+/* Élément */
+.nav-list__list-item{
+	display: inline-block;
+}
+
+/* Élément */
+.nav-list__link{
+	text-decoration: none;
+	display: inline-block;
+	padding: 0.5em 1em;
+	border-radius: 0.4em;
+	text-transform: none;
+	color: var(--secondary);
+}
+
+/*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %button. Voir le _partial _placeholders*/
+/*.nav-list__link {
+/*
+	text-transform: none;
+	color: #2b2828;
+}
+*/
+
+/* Modificateur */
+.nav-list__link--actuel-header{
+	background-color: var(--secondary); 
+	color: var(--primary);
+}
+
+/* Modificateur */
+.nav-list__link--actuel-header:hover{
+animation-name: secondary-to-active;
+animation-duration: 2s;
+}
+
+/* Modificateur */
+@keyframes secondary-to-active{
+from {background-color: var(--secondary)}
+to {background-color: var(--active)}
+}
+
+/* Pseudo classe de l'élément ci-haut */
+.nav-list__link:hover{
+	background-color: var(--active);
+	color: var(--neutral);
+	border: var(--secondary) solid 0.05em;
+}
+
+
+
+
+/* main */
+/* art */
+
+section{
+	overflow: hidden;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+
+
+
+
+
+/* footer */
+
+footer{
+	background-color: var(--neutral);
+	/* @extend ?????????? */
+	margin-top: auto;
+}
+
+/* Block */
+.flex-dark{
+	display: flex;
+	justify-content: space-around;
+	background-color: var(--secondary);
+	color: var(--neutral);
+	/* @extend ?????????? */
+	margin-top: auto;
+	padding: 2em;
+}
+
+/* Élément */
+
+.flex-dark__icon{
+	/* @extend ?????????? */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+/* Élément */
+.flex-dark__contact{
+	/* @extend ?????????? */
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	}
+
+/* Élément */
+.flex-dark__footer-message{
+	/* @extend ?????????? */
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+
+
+
+
+/* Block */
+.footer-content{
+/* @extend ?????????? */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	margin: 2em;
+}
+
+/* Modificateur */
+.logo--big{
+	width: 150%;
+}
+
+/* Modificateur */
+.footer-content__link--small{
+	font-size: 0.8em;
+	/* variation couleur */
+}
+
+

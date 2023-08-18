@@ -27,13 +27,7 @@
 }
 
 
-
-/*
-On doit importer les variables et les placeholders pour pouvoir s'en servir.
-L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
-*/
 *{ box-sizing: border-box;}
-
 
 
 /* Generals */
@@ -72,16 +66,17 @@ h2, h3, h4{
 }
 
 header{
+	/* Placeholders - règle @extend.*/
 	background-color: var(--neutral);
 }
 
 .header-content{
+	/* Placeholders - règle @extend.*/
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+
+	justify-content: space-between;
 }
-
-
 
 /* Block */
 .nav-list{
@@ -103,14 +98,6 @@ header{
 	color: var(--secondary);
 }
 
-/*La règle @extend permet d'aller chercher les propriétés CSS dans le placeholder %button. Voir le _partial _placeholders*/
-/*.nav-list__link {
-/*
-	text-transform: none;
-	color: #2b2828;
-}
-*/
-
 /* Modificateur */
 .nav-list__link--actuel-header{
 	background-color: var(--secondary); 
@@ -119,8 +106,8 @@ header{
 
 /* Modificateur */
 .nav-list__link--actuel-header:hover{
-animation-name: secondary-to-active;
-animation-duration: 2s;
+	animation-name: secondary-to-active;
+	animation-duration: 2s;
 }
 
 /* Modificateur */
@@ -155,8 +142,9 @@ section{
 /* footer */
 
 footer{
+	/* Placeholders - règle @extend.*/
 	background-color: var(--neutral);
-	/* @extend ?????????? */
+
 	margin-top: auto;
 }
 
@@ -166,34 +154,35 @@ footer{
 	justify-content: space-around;
 	background-color: var(--secondary);
 	color: var(--neutral);
-	/* @extend ?????????? */
 	margin-top: auto;
 	padding: 2em;
 }
 
 /* Élément */
-
 .flex-dark__icon{
-	/* @extend ?????????? */
+	/* Placeholders - règle @extend.*/
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+
+	justify-content: space-around;
 }
 
 /* Élément */
 .flex-dark__contact{
-	/* @extend ?????????? */
+	/* Placeholders - règle @extend.*/
 	display: flex;
-	justify-content: space-around;
 	align-items: center;
+
+	justify-content: space-around;
 	}
 
 /* Élément */
 .flex-dark__footer-message{
-	/* @extend ?????????? */
+	/* Placeholders - règle @extend.*/
 		display: flex;
-		justify-content: flex-start;
 		align-items: center;
+
+		justify-content: flex-start;
 	}
 
 
@@ -202,10 +191,11 @@ footer{
 
 /* Block */
 .footer-content{
-/* @extend ?????????? */
+	/* Placeholders - règle @extend.*/
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+
+	justify-content: space-between;
 	flex-direction: column;
 	margin: 2em;
 }

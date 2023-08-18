@@ -1,10 +1,8 @@
-
 /*
 On doit importer les variables et les placeholders pour pouvoir s'en servir.
 L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
 */
-
-@use 'variables' as *;
+@use 'variables' as v;
 @use 'placeholders';
 
 * {
@@ -13,10 +11,10 @@ L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour 
 
 /* Generals */
 body{
-	background-color: var(--primary);
+	background-color: v.$primary-color;
 	color: $primary-color;
 	line-height: 1.4;
-	font-family: $font-stack;
+	font-family: v.$font-stack;
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
@@ -29,11 +27,11 @@ body{
 }
 
 h1{
-	font-family: $font-logo;
+	font-family: v.$font-logo;
 }
 
 h2, h3, h4 {
-	font-family: $font-titles;
+	font-family: v.$font-titles;
 }
 
 
@@ -52,14 +50,15 @@ h2, h3, h4 {
 }
 
 header{
-	background-color: $neutral-color;
+	/* Placeholders - règle @extend.*/
+	@extend %back-color;
 }
 
 /* Block */
 .header-content{
-	display: flex;
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
 	justify-content: space-between;
-	align-items: center;
 }
 
 
@@ -67,15 +66,16 @@ header{
 /* footer */
 
 footer{
-	background-color: $neutral-color;
+	/* Placeholders - règle @extend.*/
+	@extend %back-color;
 	margin-top: auto;
 }
 
 /* Block */
 .footer-content{
-	display: flex;
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
 	justify-content: space-between;
-	align-items: center;
 	flex-direction: column;
 	margin: 2em;
 
@@ -87,29 +87,28 @@ footer{
 
 /* Block */
 .flex-dark{
-	display: flex;
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
 	justify-content: space-around;
-	background-color: $secondary-color;
 	color: $neutral-color;
 	margin-top: auto;
 	padding: 2em;
 
 	&__icon{
-	
-		display: flex;
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
 		justify-content: space-around;
-		align-items: center;
 	}
 
 	&__contact{
-		display: flex;
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
 		justify-content: space-around;
-		align-items: center;
-		}
+	}
 
 	&__footer-message{
-		display: flex;
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
 		justify-content: flex-start;
-		align-items: center;
-		}
+	}
 }

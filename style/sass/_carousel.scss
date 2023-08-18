@@ -1,0 +1,17 @@
+
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+
+@use 'variables' as v;
+@use 'placeholders';
+
+/* Section Art */
+/* Block */
+.art-content{
+	/* Placeholders - règle @extend.*/
+    @extend %flex-center;
+	flex-direction: column;
+	padding: 5% 5%;
+}

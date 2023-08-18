@@ -1,7 +1,4 @@
-/*
-On doit importer les variables et les placeholders pour pouvoir s'en servir.
-L'étoile (*) permet de ne pas avoir à invoquer le namespace ou le pseudo pour appeler les variables.
-*/
+/*On doit importer les variables et les placeholders pour pouvoir s'en servir.*/
 @use 'variables' as v;
 @use 'placeholders';
 
@@ -34,6 +31,11 @@ h2, h3, h4 {
 	font-family: v.$font-titles;
 }
 
+hr{
+	color: v.$secondary-color;
+	width: 100%;
+	margin: 5% 0%;
+}
 
 
 

@@ -126,13 +126,24 @@ to {background-color: var(--active)}
 
 
 /* main */
-/* art */
+/* Section Art */
 
-section{
-	overflow: hidden;
-	padding-top: 50px;
-	padding-bottom: 50px;
+/* Block */
+.art-content{
+	/* Placeholders - règle @extend.*/
+	display: flex;
+	align-items: center;
+
+	flex-direction: column;
+	padding: 5% 5%;
 }
+
+hr{
+	color: var(--secondary);
+	width: 100%;
+	margin: 5% 0%;
+}
+
 
 
 

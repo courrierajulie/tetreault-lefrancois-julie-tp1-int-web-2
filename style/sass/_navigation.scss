@@ -57,6 +57,6 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
     /* Pseudo classe de l'élément ci-haut */
     &__link:hover {
 	    background-color: $active-color;
-	    border: $secondary-color solid 0.05em;
+	    color: $neutral-color;
     }
 }

@@ -133,7 +133,6 @@ to {background-color: var(--active)}
 .nav-list__link:hover{
 	background-color: var(--active);
 	color: var(--neutral);
-	border: var(--secondary) solid 0.05em;
 }
 
 

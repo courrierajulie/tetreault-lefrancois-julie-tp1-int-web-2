@@ -206,7 +206,7 @@ input[type='submit']:hover{
 
 /* Élément */
 .subscription-content__btn{
-/* Placeholders - Bouton - règle @extend.*/
+	/* Placeholders - Bouton - règle @extend.*/
 	text-decoration: none;
 	text-transform: none;
 	padding: 0.6em 1em;
@@ -216,38 +216,34 @@ input[type='submit']:hover{
 
 /* Modificateur */
 .subscription-content__btn--index{
-	/* Placeholders - Bouton - règle @extend.*/
+	/* Placeholders - Bouton - règle @mixin.*/
 	text-decoration: none;
 	text-transform: none;
 	padding: 0.6em 1em;
 	border-radius: 0.4em;
 	color:var(--secondary);
+	border: 2px solid var(--secondary);
 
+	/* Mixin de btn (différence css) */
 	margin-top: 5%;
-	border: 2px solid black;
-
-	/* Mixin de btn (différence css)? */
 	padding: 1em 2em;
-	border-radius: 0.4em;
 	background-color: var(--neutral);
 }
 
 
 /* Pseudo classe de l'élément ci-haut */
 .subscription-content__btn--index:hover{
-	/* Placeholders - Bouton - règle @extend.*/
+	/* Placeholders - Bouton - règle @mixin.*/
 	text-decoration: none;
 	text-transform: none;
 	padding: 0.6em 1em;
 	border-radius: 0.4em;
 	color:var(--secondary);
+	border: 2px solid var(--secondary);
 
+	/* Mixin de btn (différence css) */
 	margin-top: 5%;
-	border: 2px solid black;
-
-	/* Mixin de btn (différence css)? */
 	padding: 1em 2em;
-	border-radius: 0.4em;
 	background-color: var(--accent);
 }
 

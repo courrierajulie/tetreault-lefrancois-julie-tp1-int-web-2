@@ -5,6 +5,7 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 
 @use 'variables' as v;
 @use 'placeholders';
+@use 'mixin' as m;
 
 /* Section Subscription */
 
@@ -27,49 +28,26 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
     /* Élément */
     &__btn{
     /* Placeholders - Bouton - règle @extend.*/
-        text-decoration: none;
-        text-transform: none;
-        padding: 0.6em 1em;
-        border-radius: 0.4em;
-        color: v.$secondary-color;
+	@extend %bouton;
     }
 
     /* Modificateur */
     &__btn--index{
 	/* Placeholders - Bouton - règle @extend.*/
-	text-decoration: none;
-	text-transform: none;
-	padding: 0.6em 1em;
-	border-radius: 0.4em;
-	color: v.$secondary-color;
-
-	margin-top: 5%;
-	border: 2px solid black;
-
+	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	padding: 1em 2em;
-	border-radius: 0.4em;
-	background-color: v.$neutral-color;
+	@include m.bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, v.$neutral-color);
     }
 
     /* Pseudo classe de l'élément ci-haut */
     &__btn--index:hover{
 	/* Placeholders - Bouton - règle @extend.*/
-	text-decoration: none;
-	text-transform: none;
-	padding: 0.6em 1em;
-	border-radius: 0.4em;
-	color: v.$secondary-color;
-
-	margin-top: 5%;
-	border: 2px solid black;
-
+	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	padding: 1em 2em;
-	border-radius: 0.4em;
-	background-color: v.$accent-color;
+	@include m.bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, v.$accent-color);
     }
-}
+ }
+
 
 input{
 	padding: 10px;

@@ -1,0 +1,117 @@
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+
+@use 'variables' as v;
+@use 'placeholders';
+
+/* Section Subscription */
+
+/* Block */
+.subscription-content{
+    /* Placeholders - règle @extend.*/
+    @extend %flex-center;    
+    justify-content: space-between;
+    flex-direction: column;
+    line-height: 5%;
+    
+    /* Élément */
+    &__flex-form{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;	
+	justify-content: center;
+	margin: 15%;
+    }
+
+    /* Élément */
+    &__btn{
+    /* Placeholders - Bouton - règle @extend.*/
+        text-decoration: none;
+        text-transform: none;
+        padding: 0.6em 1em;
+        border-radius: 0.4em;
+        color: v.$secondary-color;
+    }
+
+    /* Modificateur */
+    &__btn--index{
+	/* Placeholders - Bouton - règle @extend.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color: v.$secondary-color;
+
+	margin-top: 5%;
+	border: 2px solid black;
+
+	/* Mixin de btn (différence css)? */
+	padding: 1em 2em;
+	border-radius: 0.4em;
+	background-color: v.$neutral-color;
+    }
+
+    /* Pseudo classe de l'élément ci-haut */
+    &__btn--index:hover{
+	/* Placeholders - Bouton - règle @extend.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color: v.$secondary-color;
+
+	margin-top: 5%;
+	border: 2px solid black;
+
+	/* Mixin de btn (différence css)? */
+	padding: 1em 2em;
+	border-radius: 0.4em;
+	background-color: v.$accent-color;
+    }
+}
+
+input{
+	padding: 10px;
+	border-radius: 3px;
+}
+
+input:focus{
+	color: v.$neutral-color;
+	background-color: v.$accent-color;
+}
+
+input[type='submit']:hover{
+	cursor: pointer;
+	background-color: v.$secondary-color;
+	color: v.$neutral-color;
+}
+
+/* Block */
+.confirmation-content{
+	/* Placeholders - règle @extend.*/
+    @extend %flex-center;	
+	justify-content: center;
+	flex-direction: column;
+	line-height: 5%;
+	margin-bottom: 10%;
+    padding: 5% 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

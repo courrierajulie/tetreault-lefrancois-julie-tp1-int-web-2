@@ -33,11 +33,9 @@ h2, h3, h4 {
 
 hr{
 	color: v.$secondary-color;
-	width: 100%;
+	width: 90%;
 	margin: 5% 0%;
 }
-
-
 
 /* header */
 
@@ -77,7 +75,6 @@ footer{
 .footer-content{
 	/* Placeholders - règle @extend.*/
 	@extend %flex-center;
-	justify-content: space-between;
 	flex-direction: column;
 	margin: 2em;
 
@@ -99,18 +96,15 @@ footer{
 	&__icon{
 		/* Placeholders - règle @extend.*/
 		@extend %flex-center;
-		justify-content: space-around;
 	}
 
 	&__contact{
 		/* Placeholders - règle @extend.*/
 		@extend %flex-center;
-		justify-content: space-around;
 	}
 
 	&__footer-message{
 		/* Placeholders - règle @extend.*/
 		@extend %flex-center;
-		justify-content: flex-start;
 	}
 }

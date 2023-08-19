@@ -15,6 +15,7 @@
 	--secondary: #2b2828;
 	--neutral: #f6f2f2; 
 	--active: #aba9a8;
+	--accent: rgb(95, 159, 255);
 
 	/* Texte */
 		/* font-family: 'Gravitas One'; (h1)
@@ -135,14 +136,125 @@ to {background-color: var(--active)}
 	align-items: center;
 
 	flex-direction: column;
-	padding: 5% 5%;
+	padding: 5% 0% 0% 0%;
 }
 
 hr{
 	color: var(--secondary);
-	width: 100%;
+	width: 90%;
 	margin: 5% 0%;
 }
+
+
+/* main */
+/* Section Abonnement */
+/* Block */
+.subscription-content{
+/* Placeholders - règle @extend.*/
+display: flex;
+align-items: center;
+
+justify-content: space-between;
+flex-direction: column;
+line-height: 5%;
+}
+
+/* Élément */
+.subscription-content__flex-form{
+	/* Placeholders - règle @extend.*/
+	display: flex;
+	align-items: center;
+	
+	justify-content: center;
+	margin: 15%;
+}
+
+
+input{
+	padding: 10px;
+	border-radius: 3px;
+}
+
+
+input:focus{
+	color: var(--neutral);
+	background-color: var(--accent)
+	
+}
+
+
+input[type='submit']:hover{
+	cursor: pointer;
+	background-color:var(--secondary);
+	color: var(--neutral);
+}
+
+
+/* Block */
+.confirmation-content{
+	/* Placeholders - règle @extend.*/
+	display: flex;
+	align-items: center;
+	
+	justify-content: center;
+	flex-direction: column;
+	line-height: 5%;
+	margin-bottom: 10%;
+	padding: 5% 5%;
+}
+
+
+/* Élément */
+.subscription-content__btn{
+/* Placeholders - Bouton - règle @extend.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color:var(--secondary);
+}
+
+/* Modificateur */
+.subscription-content__btn--index{
+	/* Placeholders - Bouton - règle @extend.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color:var(--secondary);
+
+	margin-top: 5%;
+	border: 2px solid black;
+
+	/* Mixin de btn (différence css)? */
+	padding: 1em 2em;
+	border-radius: 0.4em;
+	background-color: var(--neutral);
+}
+
+
+/* Pseudo classe de l'élément ci-haut */
+.subscription-content__btn--index:hover{
+	/* Placeholders - Bouton - règle @extend.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color:var(--secondary);
+
+	margin-top: 5%;
+	border: 2px solid black;
+
+	/* Mixin de btn (différence css)? */
+	padding: 1em 2em;
+	border-radius: 0.4em;
+	background-color: var(--accent);
+}
+
+
+
+
+
 
 
 
@@ -174,8 +286,6 @@ footer{
 	/* Placeholders - règle @extend.*/
 	display: flex;
 	align-items: center;
-
-	justify-content: space-around;
 }
 
 /* Élément */
@@ -183,8 +293,6 @@ footer{
 	/* Placeholders - règle @extend.*/
 	display: flex;
 	align-items: center;
-
-	justify-content: space-around;
 	}
 
 /* Élément */
@@ -192,8 +300,6 @@ footer{
 	/* Placeholders - règle @extend.*/
 		display: flex;
 		align-items: center;
-
-		justify-content: flex-start;
 	}
 
 
@@ -206,7 +312,6 @@ footer{
 	display: flex;
 	align-items: center;
 
-	justify-content: space-between;
 	flex-direction: column;
 	margin: 2em;
 }

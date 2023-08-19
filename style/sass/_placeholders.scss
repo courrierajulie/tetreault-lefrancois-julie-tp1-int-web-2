@@ -16,3 +16,12 @@ peut appeler et réutiliser à l'intérieur d'autres classes à l'aide de la rè
     display: flex;
     align-items: center;
 }
+
+%bouton{
+    text-decoration: none;
+    text-transform: none;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    color: v.$secondary-color;
+    background-color: rgb(79, 172, 254);
+}

@@ -12,64 +12,38 @@
 </head> 
 
 <body>
-<!-- header -->
-	<header>
-		<div class="container header-content">
+    <!-- header -->
+    <header>
+	    <div class="container header-content">
 		<!-- intégrer font spéciale téléchargé ici -->
 		<img class="logo" src="favicon.ico" alt="Logo JUXTAPOZ"><h1>JUXTAPOZ</h1>
 		<p>Art & Culture magazine</p>
-			<nav>
-				<!--nav-list = Block (BEM)-->
-				<ul class="nav-list">
-					<!--nav-list__list-item et nav-list__link = Élément (BEM)-->
-					<!--nav-list__link--actuel-header = Modificateur (BEM)-->
-					<li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-header" href="#art">Art et Culture</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#subscription">S'abonner</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#exclusivite">Exclusivité</a></li>
-					<li class="nav-list__list-item"><a class="nav-list__link" href="#a-propos">À propos</a></li>
-				</ul>
-			</nav>
-		</div>
-	</header>
-	
-<!-- main -->
-	<main>
-		<!--art-content = Block (BEM)-->
-		<section id="art" class="art-content">
-			<!-- Carousel -->
-			<img src="img/hans-vivek-8WCMVvEWRqk-unsplash.jpg" alt="Hans Vivek - Unsplash">
-			<figcaption>Hans Vivek</figcaption>
-			<hr/>
-		</section>
+		    <nav>
+			    <!--nav-list = Block (BEM)-->
+			    <ul class="nav-list">
+				    <!--nav-list__list-item et nav-list__link = Élément (BEM)-->
+				    <!--nav-list__link--actuel-header = Modificateur (BEM)-->
+				    <li class="nav-list__list-item"><a class="nav-list__link nav-list__link--actuel-header" href="#art">Art et Culture</a></li>
+				    <li class="nav-list__list-item"><a class="nav-list__link" href="#subscription">S'abonner</a></li>
+				    <li class="nav-list__list-item"><a class="nav-list__link" href="#exclusivite">Exclusivité</a></li>
+				    <li class="nav-list__list-item"><a class="nav-list__link" href="#a-propos">À propos</a></li>
+			    </ul>
+		    </nav>
+	    </div>
+    </header>
 
-		<!--subscription-content = Block (BEM)-->
-		<section id="subscription" class="subscription-content">
-			<!-- Subscription formulaire -->
-			<h2>Abonnez-vous à JUXTAPOZ</h2>
-			<p>Le magazine dédié à l'art et à la culture.</p>
-			<p>Abonnez-vous à nos mensuels en version papier ou numérique.</p>
-			<!-- formulaire -->
-			<form action="confirmation.html" method="post">
-				<!--flex-form = Élément (BEM)-->
-				<div class="subscription-content__flex-form">
-				<input type="email" name="courriel" id="courriel" class="champs-large" placeholder="utilisateur@mail.com">
-					<!--btn = Élément (BEM)-->
-					<div class="subscription-content__btn">
-						<input class="btn" type="submit" value="S'abonner">
-					</div>
-				</div>			
-			</form>
-		</section>
+    <!-- main -->
+    <!--confirmation-content = Block (BEM)-->
+    <main class="container confirmation-content">
+        <h2>Confirmation de votre abonnement</h2>
+        <p>Merci d'avoir manifesté votre intérêt.</p>
+        <p>Vous recevrez sous peu un courriel de <strong>JUXTAPOZ</strong> pour votre abonnement.</p>
+        <!--btn index = Modificateur (BEM)-->
+        <!-- Bouton retour site index -->
+        <a class="subscription-content__btn--index" href="index.html">Revenir à la page d'accueil</a>
+    </main>
 
-
-
-		
-	</main>
-
-
-
-
-<!-- footer -->
+    <!-- footer -->
 	<footer>
 		<div class="container">
 			<!--footer-content = Block (BEM)-->
@@ -108,5 +82,3 @@
 	</footer>
 </body>
 </html>
-
-

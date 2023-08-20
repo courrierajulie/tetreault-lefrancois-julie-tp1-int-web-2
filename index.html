@@ -34,10 +34,11 @@
 	
 <!-- main -->
 	<main>
+		<div class="container">
 		<!--art-content = Block (BEM)-->
 		<section id="art" class="art-content">
 			<!-- Carousel -->
-			<img src="img/hans-vivek-8WCMVvEWRqk-unsplash.jpg" alt="Hans Vivek - Unsplash">
+			<img src="img/hans-vivek-unsplash.jpg" alt="Hans Vivek - Unsplash">
 			<figcaption>Hans Vivek</figcaption>
 			<hr/>
 		</section>
@@ -61,13 +62,30 @@
 			</form>
 		</section>
 
-
-
-		
+		<!--exclusivite-content = Block (BEM)-->
+		<section id="exclusivite" class="exclusivite-content">
+			<!--float-left = Élément (BEM)-->
+			<img class="exclusivite-content__float-left" src="img/ryan-stefan-unsplash.jpg" alt="Ryan Stephan, graphite sur toile 52'' x 74'' ">
+			<h3>Ryan Stefan</h3>
+			<p>Son œuvre a fait l'objet de nombreuses expositions individuelles présentées notamment au MASI Lugano (2020), à la FLAG Art
+			Foundation de New York (2019), au musée M WOODS de Beijing (2018) et au Musée Magritte de Bruxelles (2018).</p>
+			<p><i>Gratuit pour les membres <strong>JUXTAPOZ</strong>.</i></p>
+			<!--exclusivite-flex = Élément (BEM)-->
+			<div class="exclusivite-content__flex">
+				<div>		
+                    <h4>MAC - Musée d'Art Contemporain</h4>
+                    <p>Expositions en cours</p>
+                </div>
+				<div>		
+                    <h4>Mardi - vendredi</h4>
+                    <p>11h30 - 19h00</p>
+            	</div>
+			</div>
+			<!--btn = Élément (BEM)-->
+			<a class="exclusivite-content__btn" href="#">Voir plus</a>
+		</section>
+	</div>
 	</main>
-
-
-
 
 <!-- footer -->
 	<footer>

@@ -5,12 +5,15 @@ Ce mixin pourra être appelé afin de générer des boutons selon les différent
 On peut appeler un mixin avec la règle @include (voir les boutons dans le fichier _main.scss)
 Il faut le voir un peu comme un placeholder (@extend), mais les valeurs des propriétés CSS vont varier selon les valeurs passées en paramètres.
 */
-@mixin bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, $neutral-color, $accent-color){
+@mixin bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, $btn-border-radius, $btn-color){
     @extend %button;
-    text-decoration: none;
-	text-transform: none;
-	padding: 0.6em 1em;
-    $btn-border-radius: 0.4em;
-	color: v.$secondary-color;
-    $btn-border: 2px solid $secondary-color;
+    padding: $btn-padding;
+    margin-top: $btn-margin-top;
+    border-radius: $btn-border-radius;
+    $btn-color: $secondary-color;
+}
+
+@mixin margin($margin: 0% 5% 5% 0%){
+    @extend %margin;
+    margin: $margin;
 }

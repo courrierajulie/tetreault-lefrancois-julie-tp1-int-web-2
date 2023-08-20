@@ -36,7 +36,7 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @extend.*/
 	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	@include m.bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, v.$neutral-color);
+	@include m.bouton(v.$neutral-color);
     }
 
     /* Pseudo classe de l'élément ci-haut */
@@ -44,10 +44,9 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @extend.*/
 	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	@include m.bouton($btn-padding: 1em 2em, $btn-margin-top: 5%, v.$accent-color);
+	@include m.bouton(v.$accent-color);
     }
  }
-
 
 input{
 	padding: 10px;

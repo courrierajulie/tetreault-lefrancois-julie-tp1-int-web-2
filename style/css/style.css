@@ -248,14 +248,61 @@ input[type='submit']:hover{
 }
 
 
+/* main */
+/* Section Exclusivite */
+/* Block */
+.exclusivite-content{
+	padding: 0;
+	/* Placeholders - Margin - règle @mixin.*/
+	margin: 5% 15% 5% 0%;
+}
 
+/* Element */
+.exclusivite-content__float-left{
+	float: left;
+	/* Placeholders - Margin - règle @mixin.*/
+	margin: 0% 10% 5% 20%;
+}
 
+/* Element */
+.exclusivite-content__flex{
+	/* Placeholders - règle @extend.*/
+	display: flex;
+	align-items: center;
 
+    justify-content: space-between;
+	line-height: 5%;
+	/* Placeholders - Marginn - règle @mixin.*/
+	margin: 0% 5% 5% 0%;
+}
 
+/* Element */
+.exclusivite-content__btn{
+	/* Placeholders - Bouton - règle @mixin.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color:var(--secondary);
+	border: 2px solid var(--secondary);
 
+	/* Mixin de btn (différence css) */
+	background-color: var(--neutral);
+}
 
+/* Pseudo classe de l'élément ci-haut */
+.exclusivite-content__btn:hover{
+	/* Placeholders - Bouton - règle @mixin.*/
+	text-decoration: none;
+	text-transform: none;
+	padding: 0.6em 1em;
+	border-radius: 0.4em;
+	color:var(--secondary);
+	border: 2px solid var(--secondary);
 
-
+	/* Mixin de btn (différence css) */
+	background-color: var(--accent);
+}
 
 
 /* footer */
@@ -297,10 +344,6 @@ footer{
 		display: flex;
 		align-items: center;
 	}
-
-
-
-
 
 /* Block */
 .footer-content{

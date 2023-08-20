@@ -1,0 +1,50 @@
+/*
+On doit importer les variables et les placeholders pour pouvoir s'en servir.
+Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace variables.$abc à chaque fois.
+*/
+
+@use 'variables' as v;
+@use 'placeholders';
+@use 'mixin' as m;
+
+/* main */
+/* Section Exclusivite */
+/* Block */
+.exclusivite-content{
+	padding: 0;
+	/* Placeholders - Margin - règle @mixin.*/
+    @include m.margin(5% 15% 5% 0%);
+    
+
+    /* Element */
+    &__float-left{
+	float: left;
+	/* Placeholders - Margin - règle @mixin.*/
+    @include m.margin(0% 10% 5% 20%);
+    }
+
+    /* Element */
+    &__flex{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center; 
+    justify-content: space-between;
+	line-height: 5%;
+	/* Placeholders - Marginn - règle @mixin.*/
+	@include m.margin();
+    }
+
+    &__btn{
+	/* Placeholders - Bouton - règle @mixin.*/
+    @extend %bouton;
+	/* Mixin de btn (différence css) */
+    @include m.bouton(v.$neutral-color);
+    }
+
+    /* Pseudo classe de l'élément ci-haut */
+    &__btn:hover{
+	/* Placeholders - Bouton - règle @mixin.*/
+    @extend %bouton;
+	/* Mixin de btn (différence css) */
+    @include m.bouton(v.$accent-color);
+    }
+}

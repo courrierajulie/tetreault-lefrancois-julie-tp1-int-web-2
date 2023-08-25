@@ -13,7 +13,10 @@ Il faut le voir un peu comme un placeholder (@extend), mais les valeurs des prop
     $btn-color: $secondary-color;
 }
 
-@mixin margin($margin: 0% 5% 5% 0%){
+@mixin margin($marging-top, $marging-right, $marging-bottom, $marging-left){
     @extend %margin;
-    margin: $margin;
+    margin-top: $marging-top;
+    margin-right: $marging-right;
+    margin-bottom: $marging-bottom;
+    margin-left: $marging-left;
 }

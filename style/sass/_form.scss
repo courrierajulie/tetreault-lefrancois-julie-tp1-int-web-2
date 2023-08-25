@@ -48,6 +48,10 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
     }
  }
 
+label{
+	display: none;
+}
+
 input{
 	padding: 10px;
 	border-radius: 3px;

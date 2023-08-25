@@ -55,9 +55,10 @@
 				<!--flex-form = Élément (BEM)-->
 				<div class="subscription-content__flex-form">
 				<input type="email" name="courriel" id="courriel" class="champs-large" placeholder="utilisateur@mail.com">
+				<label for="courriel">Votre courriel</label>
 					<!--btn = Élément (BEM)-->
 					<div class="subscription-content__btn">
-						<input class="btn" type="submit" value="S'abonner">
+						<input class="btn" aria-label="Cliquez pour s'abonner au magazine JUXTAPOZ" type="submit" value="S'abonner">
 					</div>
 				</div>			
 			</form>
@@ -66,7 +67,7 @@
 		<!--exclusivite-content = Block (BEM)-->
 		<section id="exclusivite" class="exclusivite-content">
 			<!--float-left = Élément (BEM)-->
-			<img class="exclusivite-content__float-left" src="img/ryan-stefan-unsplash.jpg" alt="Ryan Stephan, graphite sur toile 52'' x 74'' ">
+			<img class="exclusivite-content__float-left" src="img/ryan-stefan-unsplash.jpg" alt="Ryan Stephan, graphite sur toile 52 pouces x 74 pouces ">
 			<h3>Ryan Stefan</h3>
 			<p>Son œuvre a fait l'objet de nombreuses expositions individuelles présentées notamment au MASI Lugano (2020), à la FLAG Art
 			Foundation de New York (2019), au musée M WOODS de Beijing (2018) et au Musée Magritte de Bruxelles (2018).</p>
@@ -83,11 +84,13 @@
             	</div>
 			</div>
 			<!--btn = Élément (BEM)-->
-			<a class="exclusivite-content__btn" href="#" role="button">Voir plus</a>
+			<a class="exclusivite-content__btn" aria-label="Cliquez pour en savoir plus" href="#" role="button">Voir plus</a>
 		</section>
 		
 		<!--Lien à propos (navigation) menant à la balise footer-->
 		<div id="footer-content"></div>
+			<!--Lien caché pour les liseuses inséré ici. Voir le CSS associé-->
+			<a href="#header-content" class="footer-content__screen-reader-text">Retour en haut de page</a>
 		</div>
 	</main>
 

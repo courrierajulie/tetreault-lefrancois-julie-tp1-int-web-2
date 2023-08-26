@@ -20,9 +20,9 @@ peut appeler et réutiliser à l'intérieur d'autres classes à l'aide de la rè
 %bouton{
     text-decoration: none;
     text-transform: none;
-    padding: $btn-padding;
-    margin-top: $btn-margin-top;
-    border-radius: $btn-border-radius;
+    padding: v.$btn-padding;
+    margin-top: v.$btn-margin-top;
+    border-radius: v.$btn-border-radius;
     color: v.$secondary-color;
 }
 

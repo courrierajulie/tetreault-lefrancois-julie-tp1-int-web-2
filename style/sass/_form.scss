@@ -36,7 +36,7 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @extend.*/
 	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	@include m.bouton(v.$neutral-color);
+	@include m.bouton($neutral-color);
     }
 
     /* Pseudo classe de l'élément ci-haut */
@@ -44,7 +44,7 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @extend.*/
 	@extend %bouton;
 	/* Mixin de btn (différence css)? */
-	@include m.bouton(v.$accent-color);
+	@include m.bouton($accent-color);
     }
  }
 
@@ -80,6 +80,29 @@ input[type='submit']:hover{
 }
 
 
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media screen and (max-width: 585px){
+	/* Confirmation.html */
+	.confirmation-content h2{
+		line-height: 1em;
+	}
+
+	.confirmation-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1em;
+	}
+	/* -Fin- Confirmation.html */
+
+	.subscription-content__flex-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
 
 
 

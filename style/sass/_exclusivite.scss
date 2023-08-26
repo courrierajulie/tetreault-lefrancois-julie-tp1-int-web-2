@@ -36,7 +36,7 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @mixin.*/
     @extend %bouton;
 	/* Mixin de btn (différence css) */
-    @include m.bouton(v.$neutral-color);
+    @include m.bouton($neutral-color);
     }
 
     /* Pseudo classe de l'élément ci-haut */
@@ -44,6 +44,35 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	/* Placeholders - Bouton - règle @mixin.*/
     @extend %bouton;
 	/* Mixin de btn (différence css) */
-    @include m.bouton(v.$accent-color);
+    @include m.bouton($accent-color);
     }
+}
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media screen and (max-width: 1175px){
+	.exclusivite-content__flex{
+		flex-direction: column;
+		align-items: self-start;
+	}
+}
+
+@media screen and (max-width: 1080px){
+	.exclusivite-content__float-left{
+		width: 45%;
+		margin-left: 9%;
+	}
+
+	.exclusivite-content{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.exclusivite-content__flex{
+		width: 95%;
+		flex-direction: row;
+	}
 }

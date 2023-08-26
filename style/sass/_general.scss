@@ -9,7 +9,7 @@
 /* Generals */
 body{
 	background-color: v.$primary-color;
-	color: $primary-color;
+	color: v.$primary-color;
 	line-height: 1.4;
 	font-family: v.$font-stack;
 	display: flex;
@@ -104,7 +104,7 @@ footer{
 	/* Placeholders - règle @extend.*/
 	@extend %flex-center;
 	justify-content: space-around;
-	color: $neutral-color;
+	color: v.$neutral-color;
 	margin-top: auto;
 	padding: 2em;
 
@@ -121,5 +121,36 @@ footer{
 	&__footer-message{
 		/* Placeholders - règle @extend.*/
 		@extend %flex-center;
+	}
+}
+
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media screen and (max-width: 1080px){
+	.hide-on-small-screen{
+		display: none !important;
+	}
+}
+
+
+@media screen and (max-width: 960px){
+	.flex-dark{
+		align-items: center;
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width: 585px){
+	.header-content img{
+		width: 30%;
+	}
+
+	.footer-content__link--small{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 }

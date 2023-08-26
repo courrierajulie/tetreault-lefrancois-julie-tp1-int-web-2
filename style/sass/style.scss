@@ -12,3 +12,438 @@ Pas besoin d'importer _placeholders et _variables, car ils sont déjà importés
 @use 'variables';
 @use 'mixin';*/
 
+
+
+
+
+
+/* ressources externes - google fonts instructions */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+
+
+
+
+
+/* Variables globales*/
+$font-stack: 'Manrope', sans-serif;
+$font-titles: 'Bebas Neue', cursive;
+$font-logo: 'Gravitas One';
+
+$primary-color: rgb(218, 216, 216);
+$secondary-color: #2b2828;
+$neutral-color: #f6f2f2;
+$active-color: #aba9a8;
+$accent-color: rgb(95, 159, 255);
+
+$btn-padding: 1em 2em;
+$btn-margin-top: 5%;
+$btn-border-radius: 0.4em;
+$btn-border: 2px solid #2b2828;
+$btn-color: rgb(95, 159, 255);
+
+$marging-top: 0%;
+$marging-right: 0%;
+$marging-bottom: 5%;
+$marging-left: 0%;
+
+
+*{ box-sizing: border-box;}
+
+
+/* Generals */
+body{
+	background-color: v.$primary-color;
+	color: v.$primary-color;
+	line-height: 1.4;
+	font-family: v.$font-stack;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.container{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h1{
+	font-family: v.$font-logo;
+}
+
+h2, h3, h4 {
+	font-family: v.$font-titles;
+}
+
+hr{
+	color: v.$secondary-color;
+	width: 90%;
+	margin: 5% 0%;
+}
+
+/* header */
+
+/* Block */
+.logo {
+	width: 5%;
+  
+	/* Logo footer */
+	&--big {
+	  width: 150%;
+	}
+}
+
+header{
+	/* Placeholders - règle @extend.*/
+	@extend %back-color;
+}
+
+/* Block */
+.header-content{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
+	justify-content: space-between;
+}
+
+
+
+/* footer */
+
+footer{
+	/* Placeholders - règle @extend.*/
+	@extend %back-color;
+	margin-top: auto;
+}
+
+/* Block */
+.footer-content{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
+	flex-direction: column;
+	margin: 2em;
+
+	/* Modificateur */
+	&__link--small{
+	font-size: 0.8em;
+	}
+
+
+	/* Lien caché pour les liseuses. CSS provenant de https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
+	&__screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+  	}
+}
+
+/* Block */
+.flex-dark{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;
+	justify-content: space-around;
+	color: v.$neutral-color;
+	margin-top: auto;
+	padding: 2em;
+
+	&__icon{
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
+	}
+
+	&__contact{
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
+	}
+
+	&__footer-message{
+		/* Placeholders - règle @extend.*/
+		@extend %flex-center;
+	}
+}
+
+
+/* Section Art */
+/* Block */
+.art-content{
+	/* Placeholders - règle @extend.*/
+    @extend %flex-center;
+	flex-direction: column;
+	padding: 5% 0% 0% 0%;
+}
+
+
+/* Section Subscription */
+/* Block */
+.subscription-content{
+    /* Placeholders - règle @extend.*/
+    @extend %flex-center;    
+    justify-content: space-between;
+    flex-direction: column;
+    line-height: 5%;
+    
+    /* Élément */
+    &__flex-form{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center;	
+	justify-content: center;
+	margin: 15%;
+    }
+
+    /* Élément */
+    &__btn{
+    /* Placeholders - Bouton - règle @extend.*/
+	@extend %bouton;
+    }
+
+    /* Modificateur */
+    &__btn--index{
+	/* Placeholders - Bouton - règle @extend.*/
+	@extend %bouton;
+	/* Mixin de btn (différence css)? */
+	@include m.bouton(v.$neutral-color);
+    }
+
+    /* Pseudo classe de l'élément ci-haut */
+    &__btn--index:hover{
+	/* Placeholders - Bouton - règle @extend.*/
+	@extend %bouton;
+	/* Mixin de btn (différence css)? */
+	@include m.bouton(v.$accent-color);
+    }
+ }
+
+label{
+	display: none;
+}
+
+input{
+	padding: 10px;
+	border-radius: 3px;
+}
+
+input:focus{
+	color: v.$neutral-color;
+	background-color: v.$accent-color;
+}
+
+input[type='submit']:hover{
+	cursor: pointer;
+	background-color: v.$secondary-color;
+	color: v.$neutral-color;
+}
+
+/* Block */
+.confirmation-content{
+	/* Placeholders - règle @extend.*/
+    @extend %flex-center;	
+	justify-content: center;
+	flex-direction: column;
+	line-height: 5%;
+	margin-bottom: 10%;
+    padding: 5% 5%;
+}
+
+
+/* main */
+/* Section Exclusivite */
+/* Block */
+.exclusivite-content{
+	padding: 0;
+	/* Placeholders - Margin - règle @mixin.*/
+    @include m.margin($marging-top 5%, $marging-right 15%);
+
+    /* Element */
+    &__float-left{
+	float: left;
+	/* Placeholders - Margin - règle @mixin.*/
+    @include m.margin(v.$marging-right 10%, v.$marging-left 20%);
+    }
+  
+    /* Element */
+    &__flex{
+	/* Placeholders - règle @extend.*/
+	@extend %flex-center; 
+    justify-content: space-between;
+	line-height: 5%;
+	/* Placeholders - Marginn - règle @mixin.*/
+	@include m.margin(v.$marging-right 5%);
+    }
+   
+    &__btn{
+	/* Placeholders - Bouton - règle @mixin.*/
+    @extend %bouton;
+	/* Mixin de btn (différence css) */
+    @include m.bouton(v.$neutral-color);
+    }
+
+    /* Pseudo classe de l'élément ci-haut */
+    &__btn:hover{
+	/* Placeholders - Bouton - règle @mixin.*/
+    @extend %bouton;
+	/* Mixin de btn (différence css) */
+    @include m.bouton(v.$accent-color);
+    }
+}
+
+
+
+/* Block */
+.nav-list {
+	list-style: none;
+
+
+    /* Élément */
+    &__list-item {
+	    display: inline-block;
+	    margin-left: 1em;
+    }
+
+    /* Élément */
+    &__link {
+	    text-decoration: none;
+	    display: inline-block;
+	    padding: 0.5em 1em;
+	    border-radius: 0.4em;
+	    text-transform: none;
+	    color: v.$secondary-color;
+    }
+
+        /* Modificateur */
+        &--actuel-header {
+	        background-color: v.$secondary-color;
+	        color: v.$primary-color;
+        }
+
+        /* Modificateur */
+        &--actuel-header:hover {
+            animation-name: secondary-to-active;
+            animation-duration: 2s;
+        }
+
+        /* Modificateur */
+        @keyframes secondary-to-active{
+        from {background-color: v.$secondary-color}
+        to {background-color: v.$active-color}
+        }
+
+    /* Pseudo classe de l'élément ci-haut */
+    &__link:hover {
+	    background-color: v.$active-color;
+	    color: v.$neutral-color;
+    }
+}
+
+
+
+/* Lien caché pour les liseuses. CSS provenant de https://make.wordpress.org/accessibility/handbook/markup/the-css-class-screen-reader-text/ */
+.footer-content__screen-reader-text{
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+  }
+
+
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+
+@media screen and (max-width: 1175px){
+	.exclusivite-content__flex{
+		flex-direction: column;
+		align-items: self-start;
+	}
+}
+
+@media screen and (max-width: 1080px){
+	.hide-on-small-screen{
+		display: none !important;
+	}
+
+	.art-content img{
+		width: 100%;
+	}
+
+	.exclusivite-content__float-left{
+		width: 45%;
+		margin-left: 9%;
+	}
+
+	.exclusivite-content{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.exclusivite-content__flex{
+		width: 95%;
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 960px){
+	.flex-dark{
+		align-items: center;
+		flex-direction: column;
+	}
+
+}
+
+@media screen and (max-width: 585px){
+	.header-content img{
+		width: 30%;
+	}
+
+	.nav-list{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.subscription-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1em;
+	}
+
+	/* Confirmation.html */
+	.confirmation-content h2{
+		line-height: 1em;
+	}
+
+	.confirmation-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		line-height: 1em;
+	}
+	/* -Fin- Confirmation.html */
+
+	.subscription-content__flex-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.footer-content__link--small{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

@@ -15,3 +15,13 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 	flex-direction: column;
 	padding: 5% 0% 0% 0%;
 }
+
+
+/* ------------- */
+/* MEDIA QUERIES */
+/* ------------- */
+@media screen and (max-width: 1080px){
+	.art-content img{
+		width: 100%;
+	}
+}

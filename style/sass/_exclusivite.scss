@@ -13,13 +13,13 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
 .exclusivite-content{
 	padding: 0;
 	/* Placeholders - Margin - règle @mixin.*/
-    @include m.margin($marging-top 5%, $marging-right 15%);
+    @include m.margin(5%, 15%, $margin-bottom, 0%);
 
     /* Element */
     &__float-left{
 	float: left;
 	/* Placeholders - Margin - règle @mixin.*/
-    @include m.margin($marging-right 10%, $marging-left 20%);
+    @include m.margin(0%, 10%, $margin-bottom, 20%);
     }
   
     /* Element */
@@ -29,13 +29,14 @@ Le 'v' est un pseudo nous permettant de ne pas avoir à écrire le namespace var
     justify-content: space-between;
 	line-height: 5%;
 	/* Placeholders - Marginn - règle @mixin.*/
-	@include m.margin($marging-right 5%);
+	@include m.margin(0%, 5%, $margin-bottom, 0%);
     }
    
     &__btn{
 	/* Placeholders - Bouton - règle @mixin.*/
     @extend %bouton;
 	/* Mixin de btn (différence css) */
+	/* ERREUR: Undefined variable */
     @include m.bouton($neutral-color);
     }
 
